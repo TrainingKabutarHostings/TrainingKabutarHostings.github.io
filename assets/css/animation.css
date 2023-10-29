@@ -1,0 +1,125 @@
+/* starts - course series list animation */
+.section-right-sidebar > nav > ul > li.expanded > ol {
+    animation:courseSeriesList 3s ease-in 1 forwards;
+}
+
+@keyframes courseSeriesList {
+    0% {
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    100% {
+        max-height: 120em;
+    }
+}
+
+/* ends - course series list animation */
+
+/* starts -  right side series arrow animation */
+.section-right-sidebar > nav > ul > li.expanded .series-heading > span:last-child::before {
+    animation:rightSideSeriesArrowDownAnimate 1s ease-in 1 forwards;
+}
+
+@keyframes rightSideSeriesArrowDownAnimate {
+    0% {        
+        display: inline-block;
+    }
+
+    100% {
+        display: inline-block;
+        transform: rotate(360deg);
+    }
+}
+
+.section-right-sidebar > nav > ul > li.closed .series-heading > span:last-child::before {
+    animation:rightSideSeriesArrowUpAnimate 1s ease-in 1 reverse;
+}
+
+@keyframes rightSideSeriesArrowUpAnimate {
+    0% {        
+        display: inline-block;
+    }
+
+    100% {
+        display: inline-block;
+        transform: rotate(360deg);
+    }
+}
+/* ends -  right side series arrow animation */
+
+/* starts - left and right slider animation for mobiles and tablets in portrait mode */
+.section-left-sidebar.mobile {
+    display: block;    
+    animation: leftSlider 1s ease-in-out 1 forwards;
+}
+
+@keyframes leftSlider {
+
+    0% {        
+        top:10vh;
+        left:0px;
+        width:0px;
+        height:85vh;
+    }
+
+    100% {
+        display: block;
+        top:10vh;
+        left:0px;
+        width:100%;
+        height:85vh;
+    }
+    
+}
+
+.section-right-sidebar.mobile {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    animation: rightSlider 1s ease-in-out 1 forwards;
+}
+
+@keyframes rightSlider {
+
+    0% {
+        position: absolute;
+        overflow: hidden;
+        top:10vh;
+        right:0px;
+        width:0px;
+        height:85vh;
+        background-color: lightgreen;
+    }
+
+    100% {
+        position: absolute;
+        overflow: hidden;
+        top:10vh;
+        left:0px;
+        width:100%;
+        height:85vh;
+        background-color: lightgreen;
+    }
+    
+}
+/* ends - left slider animation for mobiles and tablets in portrait mode */
+
+
+/* starts - carousel floater animation */
+
+.floater {
+    animation: floatOverCarousel 3s -2s ease-in-out 1 forwards
+}
+
+@keyframes floatOverCarousel {
+    0% {
+        left:-50%;
+    }
+
+    100% {
+        left:50%;
+    }
+}
+
+/* ends - carousel floater animation */
